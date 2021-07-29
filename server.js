@@ -32,6 +32,7 @@ const storage = multer.diskStorage({
     cb(null, req.body.name)
   },
 })
+//setup the correct user email on my local git so i can see my exact username in the commit
 
 const upload = multer({ storage: storage })
 app.post("api/upload", upload.single("file"), (req, res) => {
